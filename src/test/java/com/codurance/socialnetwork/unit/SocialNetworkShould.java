@@ -7,8 +7,6 @@ import com.codurance.socialnetwork.SocialNetwork;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -33,6 +31,7 @@ class SocialNetworkShould {
 		socialNetwork.post("Alice", "I love the weather today");
 
 		// assert
-		verify(postRepository).savePost(any(Post.class));
+		verify(postRepository).savePost("Alice", "I love the weather today");
 	}
+
 }

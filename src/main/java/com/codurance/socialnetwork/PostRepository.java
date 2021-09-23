@@ -1,7 +1,15 @@
 package com.codurance.socialnetwork;
 
-public class PostRepository {
-    public void savePost(Post post) {
+public class PostRepository implements IPostRepository {
+
+    public PostRepository() {
+    }
+
+    @Override
+    public void savePost(String username, String message) {
+        Post post = new Post();
 
     }
+
+
 }
